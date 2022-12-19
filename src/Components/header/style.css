@@ -1,0 +1,52 @@
+header {
+  display: flex;
+  width: 1200px;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  height: 105px;
+}
+.logo {
+  width: 600px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.strong p {
+  width: 300px;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #4793ff;
+}
+.logoImg {
+  width: 65px;
+}
+.strong {
+}
+.navigation {
+  width: 50%;
+  display: flex;
+  text-align: center;
+}
+.navigation {
+  width: 50%;
+  justify-content: end;
+}
+
+select {
+  background: rgba(71, 147, 255, 0.2);
+  border-radius: 10px;
+  width: 200px;
+  padding: 1rem;
+  color: black;
+}
+option {
+  border-radius: 5px;
+  margin: 5px;
+}
+button {
+  background: white;
+  margin: 0 25px;
+}
