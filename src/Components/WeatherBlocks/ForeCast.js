@@ -12,6 +12,7 @@ const ForeCast = () => {
         {days.map((project) => {
           return (
             <MiniCard
+              key={project.id}
               day={project.day}
               day_info={project.day_info}
               icon_id={project.icon_id}

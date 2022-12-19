@@ -1,6 +1,7 @@
 // import { weatherSvg } from "./weatherSvg";
 const days = [
   {
+    id: 1,
     day: "Сегодня",
     day_info: "28 авг",
     icon_id: "sun",
@@ -9,6 +10,7 @@ const days = [
     info: "Солнечно",
   },
   {
+    id: 2,
     day: "Завтра",
     day_info: "29 авг",
     icon_id: "small_rain_sun",
@@ -17,6 +19,7 @@ const days = [
     info: "Небольшой дождь",
   },
   {
+    id: 3,
     day: "Ср",
     day_info: "30 авг",
     icon_id: "small_rain",
@@ -25,6 +28,7 @@ const days = [
     info: "Дождь",
   },
   {
+    id: 4,
     day: "Чт",
     day_info: "28 авг",
     icon_id: "mainly_cloudy",
@@ -33,6 +37,7 @@ const days = [
     info: "Облачно",
   },
   {
+    id: 5,
     day: "Пт",
     day_info: "28 авг",
     icon_id: "rain",
@@ -41,14 +46,16 @@ const days = [
     info: "Дождь",
   },
   {
+    id: 6,
     day: "Сб",
     day_info: "28 авг",
-    icon_id: "lightning",
+    icon_id: "sun",
     temp_day: "+18",
     temp_night: "+15",
     info: "Гроза",
   },
   {
+    id: 7,
     day: "Вс",
     day_info: "28 авг",
     icon_id: "sun",
