@@ -20,9 +20,7 @@ const Header = () => {
         <select name="Выбрать город" id="12">
           <option value="spb">Питер</option>
           <option value="moscow">Москва</option>
-          <option selected value="konakovo">
-            Конаково
-          </option>
+          <option defaultValue={"konakovo"}>Конаково</option>
         </select>
       </div>
     </header>
