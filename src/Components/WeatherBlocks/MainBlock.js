@@ -3,11 +3,11 @@ import BigLoc from "../WeatherCards/bigLoc/BigLoc";
 import BigLocInfo from "../WeatherCards/bigLocInfo/BigLocInfo";
 import "./styles.css";
 
-const MainBlock = () => {
+const MainBlock = ({ weather }) => {
   return (
     <section className="mainBlock">
-      <BigLoc />
-      <BigLocInfo />
+      <BigLoc weather={weather} />
+      <BigLocInfo weather={weather} />
     </section>
   );
 };

@@ -1,20 +1,32 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Components/header/Header";
 import Main from "./Components/main/Main";
 import getFormattedWeatherData from "./Components/services/weatherService";
 
 function App() {
-  const fetchWeather = async () => {
-    const data = await getFormattedWeatherData({ q: "London" });
-    console.log(data);
-  };
+  const [query, setQuery] = useState({ q: "гамбург" });
+  const [weather, setWeather] = useState(null);
 
-  fetchWeather();
+  useEffect(() => {
+    const fetchWeather = async () => {
+      await getFormattedWeatherData({ ...query }).then((data) => {
+        setWeather(data);
+        console.log(data);
+      });
+    };
+
+    fetchWeather();
+  }, [query]);
 
   return (
     <div className="App">
-      <Header />
-      <Main />
+      {weather && (
+        <div>
+          <Header />
+          <Main weather={weather} />
+        </div>
+      )}
     </div>
   );
 }

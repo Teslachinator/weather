@@ -4,10 +4,10 @@ import "./style.css";
 import MainBlock from "../WeatherBlocks/MainBlock";
 import ForeCast from "../WeatherBlocks/ForeCast";
 
-const Main = () => {
+const Main = ({ weather }) => {
   return (
     <main>
-      <MainBlock />
+      <MainBlock weather={weather} />
       <ForeCast />
     </main>
   );
