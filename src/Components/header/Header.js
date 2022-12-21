@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "./Logo.svg";
-import "./style.css";
+import errs from "./Error.svg";
+import "./headerStyle.css";
 
 import btn from "./Vector.svg";
 const Header = () => {
@@ -12,16 +13,15 @@ const Header = () => {
           <p>Погода и точка</p>
         </div>
       </div>
-      <div className="navigation">
+      <div className="navigation_error">
+        <button>
+          <img src={errs} alt="#" />
+        </button>
+      </div>
+      <div className="navigation_teme">
         <button>
           <img src={btn} alt="#" />
         </button>
-
-        <select name="Выбрать город" id="12">
-          <option value="spb">Питер</option>
-          <option value="moscow">Москва</option>
-          <option defaultValue={"konakovo"}>Конаково</option>
-        </select>
       </div>
     </header>
   );

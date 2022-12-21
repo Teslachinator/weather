@@ -1,24 +1,24 @@
 header {
   display: flex;
-  width: 1200px;
+  width: 100%;
   padding: 2rem;
   justify-content: space-between;
   align-items: center;
   height: 105px;
 }
 .logo {
-  width: 600px;
+  width: 50%;
   display: flex;
   text-align: center;
   align-items: center;
 }
 .strong p {
-  width: 300px;
+  max-width: 300px;
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
   text-transform: uppercase;
-  color: #4793ff;
+  color: var(--color-blue);
 }
 .logoImg {
   width: 65px;
@@ -30,23 +30,26 @@ header {
   display: flex;
   text-align: center;
 }
-.navigation {
-  width: 50%;
+.navigation_teme {
+  justify-content: end;
+}
+.navigation_error {
   justify-content: end;
 }
 
-select {
-  background: rgba(71, 147, 255, 0.2);
-  border-radius: 10px;
-  width: 200px;
-  padding: 1rem;
-  color: black;
-}
-option {
-  border-radius: 5px;
-  margin: 5px;
-}
 button {
   background: white;
   margin: 0 25px;
+  width: 28px;
+  height: 28px;
+}
+@media (min-width: 1024px) {
+  header {
+    min-width: 960px;
+  }
+}
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 480px) {
 }

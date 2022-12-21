@@ -1,9 +1,9 @@
 import React from "react";
-import "./style.css";
-import tempSVG from "./Group.svg";
-import presSVG from "./pressure.svg";
-import precipilation from "./Group3.svg";
-import wind from "./Group4.svg";
+import "./bigLocInfoStyle.css";
+import tempSVG from "./SVG/Group.svg";
+import presSVG from "./SVG/pressure.svg";
+import precipilation from "./SVG/Group3.svg";
+import wind from "./SVG/Group4.svg";
 const BigLocInfo = ({
   weather: {
     speed,

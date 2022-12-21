@@ -2,6 +2,8 @@
 
 :root {
   font-size: 62.5%;
+  --color-blue: #4793ff;
+  --color-gray: #939cb0;
 }
 .App {
   display: flex;
@@ -11,7 +13,24 @@
   width: 62.5%;
   align-items: center;
 
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   text-align: left;
+}
+@media (min-width: 1024px) {
+  .App {
+    width: 70%;
+    max-width: 1200px;
+  }
+}
+@media (max-width: 1024px) {
+  .App {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    width: 90%;
+  }
 }

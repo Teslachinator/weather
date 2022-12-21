@@ -1,6 +1,6 @@
 import React from "react";
 import sunny from "./Sun.svg";
-import "./style.css";
+import "./bigLocStyle.css";
 
 const BigLoc = ({ weather: { dt, name, country, temp } }) => {
   return (
