@@ -1,46 +1,87 @@
 import React from "react";
 import "./style.css";
-import temp from "./Group.svg";
-import pressure from "./pressure.svg";
+import tempSVG from "./Group.svg";
+import presSVG from "./pressure.svg";
 import precipilation from "./Group3.svg";
 import wind from "./Group4.svg";
-const BigLocInfo = () => {
-  const value = {
-    info_temp: "20° - ощущается как 17°",
-    info_pressure: "765 мм ртутного столба - нормальное",
-    info_precipilation: "Без осадков",
-    info_wind: "3 м/с юго-запад - легкий ветер",
-  };
+const BigLocInfo = ({
+  weather: {
+    speed,
+    pressure,
+    humidity,
+    windWirection,
+    feels_like,
+    visibility,
+    sunrise,
+    description,
+    sunset,
+    temp,
+  },
+}) => {
   return (
     <article className="info">
       <ul>
         <li>
           <div className="info_logo-bg">
-            <img className="info_logo" src={temp} alt="#" />
+            <img className="info_logo" src={tempSVG} alt="#" />
           </div>
           <p className="property">Температура</p>
-          <p className="textCont">{value.info_temp}</p>
+          <p className="textCont">
+            {temp}° - ощущается как {feels_like}°
+          </p>
         </li>
         <li>
           <div className="info_logo-bg">
-            <img className="info_logo" src={pressure} alt="#" />
+            <img className="info_logo" src={presSVG} alt="#" />
           </div>
           <p className="property">Давление </p>
-          <p className="textCont">{value.info_pressure}</p>
+          <p className="textCont">{pressure} мм ртутного столба</p>
         </li>
         <li>
           <div className="info_logo-bg">
             <img className="info_logo" src={precipilation} alt="#" />
           </div>
-          <p className="property">Осадки</p>
-          <p className="textCont">{value.info_precipilation}</p>
+          <p className="property">Влажность</p>
+          <p className="textCont">{humidity}%</p>
         </li>
         <li>
           <div className="info_logo-bg">
             <img className="info_logo" src={wind} alt="#" />
           </div>
           <p className="property">Ветер</p>
-          <p className="textCont">{value.info_wind}</p>
+          <p className="textCont">
+            {speed} м/с {windWirection}
+          </p>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <div className="info_logo-bg">
+            <img className="info_logo" src={tempSVG} alt="#" />
+          </div>
+          <p className="property">Восход</p>
+          <p className="textCont">Время: {sunset}</p>
+        </li>
+        <li>
+          <div className="info_logo-bg">
+            <img className="info_logo" src={tempSVG} alt="#" />
+          </div>
+          <p className="property">Закат</p>
+          <p className="textCont">Время: {sunrise}</p>
+        </li>
+        <li>
+          <div className="info_logo-bg">
+            <img className="info_logo" src={tempSVG} alt="#" />
+          </div>
+          <p className="property">Осадки</p>
+          <p className="textCont">{description}</p>
+        </li>
+        <li>
+          <div className="info_logo-bg">
+            <img className="info_logo" src={tempSVG} alt="#" />
+          </div>
+          <p className="property">Видимость</p>
+          <p className="textCont">{visibility}</p>
         </li>
       </ul>
     </article>

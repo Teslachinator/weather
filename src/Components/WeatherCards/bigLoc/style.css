@@ -32,7 +32,8 @@
   line-height: 49px;
   color: #000000;
 }
-img {
+.img {
+  margin: 0 auto;
   grid-area: c;
 }
 time {

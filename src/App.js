@@ -5,7 +5,7 @@ import Main from "./Components/main/Main";
 import getFormattedWeatherData from "./Components/services/weatherService";
 
 function App() {
-  const [query, setQuery] = useState({ q: "гамбург" });
+  const [query, setQuery] = useState({ q: "питер" });
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {

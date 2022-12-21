@@ -17,8 +17,9 @@ const getWeatherData = (infoType, searchParams) => {
 
 const formatCurrentWather = (data) => {
   let {
-    main: { temp, temp_min, temp_max, humidity, pressure },
+    main: { temp, temp_min, temp_max, feels_like, humidity, pressure },
     visibility,
+    dt,
     name,
     sys: { country, sunrise, sunset },
     weather,
@@ -46,16 +47,42 @@ const formatCurrentWather = (data) => {
   }
 
   pressure = Math.round(pressure * 0.750064);
-  sunrise = new Date(sunrise * 1000);
-  sunset = new Date(sunset * 1000);
+  // sunrise = new Date(sunrise * 1000);
+  // sunset = new Date(sunset * 1000);
+  feels_like = Math.round(feels_like);
   temp = Math.round(temp);
   temp_max = Math.round(temp_max);
   temp_min = Math.round(temp_min);
   speed = speed.toFixed(1);
 
-  const { main: details, icon } = weather[0];
+  const hourMin = (d) => {
+    let hours = new Date(d * 1000).getHours();
+    let minutes = new Date(d * 1000).getMinutes();
+    const getZero = (num) => {
+      if (num >= 0 && num < 10) {
+        return `0${num}`;
+      } else {
+        return num;
+      }
+    };
+    hours = getZero(hours);
+    minutes = getZero(minutes);
+    let formatTime = `${hours}:${minutes}`;
+    return formatTime;
+  };
+
+  sunrise = hourMin(sunrise);
+  sunset = hourMin(sunset);
+  dt = hourMin(dt);
+
+  // const hours = new Date(dt * 1000).getHours();
+  // const minutes = new Date(dt * 1000).getMinutes();
+
+  const { description, icon } = weather[0];
 
   return {
+    dt,
+    feels_like,
     temp,
     temp_min,
     temp_max,
@@ -68,8 +95,9 @@ const formatCurrentWather = (data) => {
     sunrise,
     sunset,
     weather,
-    details,
+
     pressure,
+    description,
     icon,
     speed,
   };

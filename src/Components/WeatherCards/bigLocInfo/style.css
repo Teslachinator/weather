@@ -5,7 +5,10 @@
   box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
   border-radius: 20px;
   margin-left: 50px;
-  padding: 0 32px;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .info {
   position: relative;
@@ -17,7 +20,11 @@
   /* width: 450px;
   height: 202px; */
 }
-ul li {
+ul {
+  flex: 0 1 50%;
+  padding: 0 10px;
+}
+.info li {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
