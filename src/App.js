@@ -14,7 +14,9 @@ import SearchLocate from "./Components/WeatherCards/SearchLocate/SearchLocate";
 //доделать кнопку с поиском
 
 function App() {
-  const [query, setQuery] = useState({ q: "Moscow" });
+  const [query, setQuery] = useState(
+    JSON.parse(localStorage.getItem("name")) || { q: "Moscow" }
+  );
 
   // const [query, setQuery] = useState({ q: "Moscow" });
   const [weather, setWeather] = useState(null);
