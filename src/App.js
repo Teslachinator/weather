@@ -1,17 +1,22 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Components/header/Header";
-import getFormattedWeatherData from "./Components/services/weatherService";
-import MainBlock from "./Components/WeatherBlock/MainBlock";
 
-//Сделать адаптив сайта
+import getFormattedWeatherData from "./Components/services/weatherService";
+import BigLoc from "./Components/WeatherCards/bigLoc/BigLoc";
+import BigLocInfo from "./Components/WeatherCards/bigLocInfo/BigLocInfo";
+import SearchLocate from "./Components/WeatherCards/SearchLocate/SearchLocate";
+
+//Сделать адаптив сайта +
 //Форматнуть видимость, найти иконки для категорий
 //Добавить подбор иконок для погоды
-//Добавить ERR иконку, попапы, убрать прогнозы на неделю
+//Добавить ERR иконку, убрать прогнозы на неделю +
 //Добавить на это место быстрый список городов и поиск
+//попапы
+//доделать кнопку с поиском
 
 function App() {
-  const [query, setQuery] = useState({ q: "питер" });
+  const [query, setQuery] = useState({ q: "саранск" });
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
@@ -30,7 +35,11 @@ function App() {
       {weather && (
         <div>
           <Header />
-          <MainBlock weather={weather} />
+          <section className="mainBlock">
+            <BigLoc weather={weather} />
+            <SearchLocate setQuery={setQuery} />
+            <BigLocInfo weather={weather} />
+          </section>
         </div>
       )}
     </div>

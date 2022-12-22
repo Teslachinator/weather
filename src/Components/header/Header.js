@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "./Logo.svg";
 import errs from "./Error.svg";
 import "./headerStyle.css";
-
 import btn from "./Vector.svg";
+import Popup from "../Helpers/Popup/Popup";
 const Header = () => {
+  const [popupActive, setPopupActive] = useState(true);
   return (
     <header>
       <div className="logo">
@@ -13,7 +14,7 @@ const Header = () => {
           <p>Погода и точка</p>
         </div>
       </div>
-      <div className="navigation_error">
+      <div className="navigation_error" onClick={() => setPopupActive(true)}>
         <button>
           <img src={errs} alt="#" />
         </button>
@@ -23,6 +24,7 @@ const Header = () => {
           <img src={btn} alt="#" />
         </button>
       </div>
+      <Popup active={popupActive} setActive={setPopupActive} />
     </header>
   );
 };

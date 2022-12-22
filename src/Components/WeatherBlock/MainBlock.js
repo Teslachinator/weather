@@ -4,11 +4,11 @@ import BigLocInfo from "../WeatherCards/bigLocInfo/BigLocInfo";
 import SearchLocate from "./../WeatherCards/SearchLocate/SearchLocate";
 import "./mainStyles.css";
 
-const MainBlock = ({ weather }) => {
+const MainBlock = ({ weather }, { setQuery }) => {
   return (
     <section className="mainBlock">
       <BigLoc weather={weather} />
-      <SearchLocate />
+      <SearchLocate setQuery={setQuery} />
       <BigLocInfo weather={weather} />
     </section>
   );

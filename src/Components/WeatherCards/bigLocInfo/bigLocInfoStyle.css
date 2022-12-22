@@ -11,9 +11,9 @@
   flex-wrap: wrap;
 }
 .info {
-  position: relative;
+  /* position: relative;
   right: 0;
-  top: 0;
+  top: 0; */
   background: no-repeat url(./image1.png);
   background-position: right top;
 

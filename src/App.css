@@ -17,15 +17,31 @@
   margin: 0 auto;
   text-align: left;
 }
+.mainBlock {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+  gap: 30px;
+}
 @media (min-width: 1024px) {
   .App {
     width: 70%;
     max-width: 1200px;
   }
+  .mainBlock {
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 960px;
+  }
 }
 @media (max-width: 1024px) {
   .App {
     width: 90%;
+  }
+  .mainBlock {
+    flex-wrap: wrap;
   }
 }
 
