@@ -5,7 +5,7 @@ import "./headerStyle.css";
 import btn from "./Vector.svg";
 import Popup from "../Helpers/Popup/Popup";
 const Header = () => {
-  const [popupActive, setPopupActive] = useState(true);
+  const [popupActive, setPopupActive] = useState(false);
   return (
     <header>
       <div className="logo">

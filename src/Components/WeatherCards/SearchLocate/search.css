@@ -32,15 +32,17 @@
 }
 .versionMB {
   display: block;
+  margin: 0;
 }
 
-.versionMB .active {
+.versionPC.active {
   display: flex;
 }
 
-.searchLocate div {
+.searchBar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px;
   background-color: var(--color-blue);
   border-radius: 15px;
@@ -74,14 +76,19 @@
   .versionMB {
     display: none;
   }
+  .versionPC .active {
+    display: flex;
+  }
 }
 @media (max-width: 1024px) {
   .searchLocate {
     flex: 0 1 50%;
     max-width: 600px;
-
     order: 1;
   }
+  /* .versionPC .active {
+    display: flex;
+  } */
 }
 
 @media (max-width: 480px) {

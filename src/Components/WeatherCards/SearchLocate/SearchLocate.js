@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "./search.css";
 const SearchLocate = ({ setQuery }) => {
-  const [fastSearch, setFastSearch] = useState(true);
+  const [fastSearch, setFastSearch] = useState(false);
+
+  const toogle = () => {
+    setFastSearch((wasOp) => !wasOp);
+  };
 
   const [city, setCity] = useState("");
 
@@ -50,7 +54,7 @@ const SearchLocate = ({ setQuery }) => {
 
   return (
     <div className="searchLocate">
-      <div>
+      <div className="searchBar">
         <input
           value={city}
           onChange={(e) => setCity(e.currentTarget.value)}
@@ -70,10 +74,8 @@ const SearchLocate = ({ setQuery }) => {
         </svg>
 
         <svg
-          className={
-            fastSearch ? "buttons versionMB active" : "buttons versionPC"
-          }
-          onClick={() => setFastSearch(true)}
+          className="searchLocate_btn versionMB"
+          onClick={toogle}
           xmlns="http://www.w3.org/2000/svg"
           height="24"
           width="24"
@@ -81,7 +83,12 @@ const SearchLocate = ({ setQuery }) => {
           <path d="M2.225 18.525v-2.65h13.65v2.65ZM19.9 17.45 14.45 12l5.45-5.45 1.875 1.85-3.6 3.6 3.6 3.6ZM2.225 13.325v-2.65h10.65v2.65Zm0-5.2v-2.65h13.65v2.65Z" />
         </svg>
       </div>
-      <nav className="searchLocate_btn versionPC">
+      {/* /*--------------- */}
+      <nav
+        className={
+          fastSearch ? "buttons versionPC active" : "buttons versionPC"
+        }
+      >
         {cities.map((cities) => (
           <button key={cities.id} onClick={() => setQuery({ q: cities.title })}>
             {cities.title}
