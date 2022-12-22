@@ -1,7 +1,7 @@
 .searchLocate {
   order: 3;
   max-width: 400px;
-  max-height: 300px;
+  max-height: max-content;
   padding: 0;
 
   border-radius: 15px;
@@ -27,6 +27,21 @@
   border-radius: 20px;
 }
 
+.buttons button:hover {
+  box-shadow: 2px 5px 25px 10px rgba(180, 180, 180, 0.5);
+}
+.buttons button:active {
+  color: #ffffff;
+  box-shadow: inset 2px 5px 25px 10px rgba(180, 180, 180, 0.5);
+  background: var(--color-blue);
+  transition: 1s ease-in-out;
+}
+.buttons button:focus {
+  color: #ffffff;
+  background: var(--color-blue);
+  transition: 1s;
+}
+
 .versionPC {
   display: none;
 }
@@ -47,13 +62,24 @@
   background-color: var(--color-blue);
   border-radius: 15px;
 }
+
+.searchBar:hover {
+  box-shadow: 2px 5px 25px 10px rgba(180, 180, 180, 0.5);
+  color: #ffffff;
+}
+
+.searchBar input:focus {
+  transform: scale(1.1) translate(20px, 0);
+  transition: 1s;
+}
+
 .searchLocate_text {
   width: 80%;
   font-weight: 500;
   border: none;
   outline: none;
   background: transparent;
-  color: black;
+  color: white;
   background-color: var(--color-blue);
 }
 
@@ -70,13 +96,13 @@
     order: 2;
     flex: 0 1 50%;
   }
-  /* .versionPC {
-    display: flex;
-  } */
   .versionMB {
     display: none;
   }
   .versionPC .active {
+    display: flex;
+  }
+  .versionPC {
     display: flex;
   }
 }
@@ -86,9 +112,9 @@
     max-width: 600px;
     order: 1;
   }
-  /* .versionPC .active {
-    display: flex;
-  } */
+  .buttons {
+    justify-content: space-evenly;
+  }
 }
 
 @media (max-width: 480px) {

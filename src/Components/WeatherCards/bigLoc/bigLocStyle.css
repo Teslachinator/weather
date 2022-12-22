@@ -15,6 +15,11 @@
     "e e";
   text-align: left;
 }
+
+.bigloc:hover {
+  box-shadow: 2px 5px 25px 10px rgba(180, 180, 180, 0.5);
+}
+
 .degries {
   grid-area: a;
   font-style: normal;

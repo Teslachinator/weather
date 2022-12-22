@@ -44,11 +44,23 @@ const SearchLocate = ({ setQuery }) => {
     },
     {
       id: 8,
-      title: "Екатеринбург",
+      title: "Дубна",
     },
     {
       id: 9,
       title: "Конаково",
+    },
+    {
+      id: 10,
+      title: "Пенза",
+    },
+    {
+      id: 11,
+      title: "Томбов",
+    },
+    {
+      id: 12,
+      title: "Екатеринбург",
     },
   ];
 
@@ -83,7 +95,7 @@ const SearchLocate = ({ setQuery }) => {
           <path d="M2.225 18.525v-2.65h13.65v2.65ZM19.9 17.45 14.45 12l5.45-5.45 1.875 1.85-3.6 3.6 3.6 3.6ZM2.225 13.325v-2.65h10.65v2.65Zm0-5.2v-2.65h13.65v2.65Z" />
         </svg>
       </div>
-      {/* /*--------------- */}
+      {/*--------------- */}
       <nav
         className={
           fastSearch ? "buttons versionPC active" : "buttons versionPC"

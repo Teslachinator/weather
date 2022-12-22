@@ -7,17 +7,23 @@ import BigLoc from "./Components/WeatherCards/bigLoc/BigLoc";
 import BigLocInfo from "./Components/WeatherCards/bigLocInfo/BigLocInfo";
 import SearchLocate from "./Components/WeatherCards/SearchLocate/SearchLocate";
 
-//Сделать адаптив сайта +
+//фикс адаптива сайта
 //Форматнуть видимость, найти иконки для категорий
 //Добавить подбор иконок для погоды
-//Добавить ERR иконку, убрать прогнозы на неделю +
-//Добавить на это место быстрый список городов и поиск
 //попапы
 //доделать кнопку с поиском
 
 function App() {
-  const [query, setQuery] = useState({ q: "саранск" });
+  const [query, setQuery] = useState({ q: "Moscow" });
+
+  // const [query, setQuery] = useState({ q: "Moscow" });
   const [weather, setWeather] = useState(null);
+
+  // useEffect(() => {}, []);
+
+  useEffect(() => {
+    localStorage.setItem("name", JSON.stringify(query));
+  }, [query]);
 
   useEffect(() => {
     const fetchWeather = async () => {
