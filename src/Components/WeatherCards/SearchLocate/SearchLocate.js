@@ -97,6 +97,7 @@ const SearchLocate = ({ setQuery }) => {
       </div>
       {/*--------------- */}
       <nav
+        onClick={toogle}
         className={
           fastSearch ? "buttons versionPC active" : "buttons versionPC"
         }

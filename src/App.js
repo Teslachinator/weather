@@ -10,18 +10,13 @@ import SearchLocate from "./Components/WeatherCards/SearchLocate/SearchLocate";
 //фикс адаптива сайта
 //Форматнуть видимость, найти иконки для категорий
 //Добавить подбор иконок для погоды
-//попапы
-//доделать кнопку с поиском
 
 function App() {
   const [query, setQuery] = useState(
-    JSON.parse(localStorage.getItem("name")) || { q: "Moscow" }
+    { q: "Москва" } || JSON.parse(localStorage.getItem("name"))
   );
 
-  // const [query, setQuery] = useState({ q: "Moscow" });
   const [weather, setWeather] = useState(null);
-
-  // useEffect(() => {}, []);
 
   useEffect(() => {
     localStorage.setItem("name", JSON.stringify(query));
