@@ -13,7 +13,7 @@ import SearchLocate from "./Components/WeatherCards/SearchLocate/SearchLocate";
 
 function App() {
   const [query, setQuery] = useState(
-    { q: "Москва" } || JSON.parse(localStorage.getItem("name"))
+    JSON.parse(localStorage.getItem("name")) || { q: "Москва" }
   );
 
   const [weather, setWeather] = useState(null);
