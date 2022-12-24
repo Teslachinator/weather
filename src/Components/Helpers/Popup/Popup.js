@@ -1,7 +1,7 @@
 import React from "react";
 import "./popup.css";
 
-const Popup = ({ active, setActive }) => {
+const Popup = ({ active, setActive, children }) => {
   return (
     <div
       className={active ? "popup_bg popActive" : "popup_bg"}
@@ -11,10 +11,7 @@ const Popup = ({ active, setActive }) => {
         className={active ? "popup popActive" : "popup"}
         onClick={(e) => e.stopPropagation()}
       >
-        <p>
-          К сожалению сервис OpenWeather не дает возможности показывать прогноз
-          погоды на несколько дней вперед бесплатно
-        </p>
+        {children}
       </div>
     </div>
   );

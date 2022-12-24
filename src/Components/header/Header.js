@@ -24,7 +24,12 @@ const Header = () => {
           <img src={btn} alt="#" />
         </button>
       </div>
-      <Popup active={popupActive} setActive={setPopupActive} />
+      <Popup active={popupActive} setActive={setPopupActive}>
+        <p>
+          К сожалению сервис OpenWeather не дает возможности показывать прогноз
+          погоды на несколько дней вперед бесплатно
+        </p>
+      </Popup>
     </header>
   );
 };

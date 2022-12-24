@@ -56,7 +56,7 @@ const SearchLocate = ({ setQuery }) => {
     },
     {
       id: 11,
-      title: "Томбов",
+      title: "Тамбов",
     },
     {
       id: 12,

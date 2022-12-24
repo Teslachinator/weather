@@ -82,5 +82,6 @@ ul:last-child li:last-child {
 @media (max-width: 480px) {
   .info {
     order: 3;
+    min-width: 350px;
   }
 }

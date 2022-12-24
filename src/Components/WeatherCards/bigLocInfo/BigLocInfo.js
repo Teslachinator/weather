@@ -60,14 +60,14 @@ const BigLocInfo = ({
             <img className="info_logo" src={tempSVG} alt="#" />
           </div>
           <p className="property">Восход</p>
-          <p className="textCont">Время: {sunset}</p>
+          <p className="textCont">время: {sunrise}</p>
         </li>
         <li>
           <div className="info_logo-bg">
             <img className="info_logo" src={tempSVG} alt="#" />
           </div>
           <p className="property">Закат</p>
-          <p className="textCont">Время: {sunrise}</p>
+          <p className="textCont">время: {sunset}</p>
         </li>
         <li>
           <div className="info_logo-bg">

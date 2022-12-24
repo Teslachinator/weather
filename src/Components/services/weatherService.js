@@ -20,6 +20,7 @@ const formatCurrentWather = (data) => {
     main: { temp, temp_min, temp_max, feels_like, humidity, pressure },
     visibility,
     dt,
+
     name,
     sys: { country, sunrise, sunset },
     weather,
@@ -44,6 +45,28 @@ const formatCurrentWather = (data) => {
     windWirection = "запад";
   } else if (292.5 <= deg && deg < 337.5) {
     windWirection = "северо - запад";
+  }
+
+  if (visibility < 50) {
+    visibility = "очень плохая - 0 баллов";
+  } else if (visibility >= 50 && visibility < 200) {
+    visibility = "очень плохая - 1 балл";
+  } else if (visibility >= 200 && visibility < 500) {
+    visibility = "очень плохая - 2 балла";
+  } else if (visibility >= 500 && visibility < 1000) {
+    visibility = "плохая - 3 балла";
+  } else if (visibility >= 1000 && visibility < 2000) {
+    visibility = "очень плохая - 4 балла";
+  } else if (visibility >= 2000 && visibility < 4000) {
+    visibility = "средняя - 5 баллов";
+  } else if (visibility >= 4000 && visibility < 10000) {
+    visibility = "средняя - 6 баллов";
+  } else if (visibility >= 10000 && visibility < 20000) {
+    visibility = "хорошая - 7 баллов";
+  } else if (visibility >= 20000 && visibility < 50000) {
+    visibility = "очень хорошая - 8 баллов";
+  } else if (visibility >= 50000) {
+    visibility = "исключительная - 9 баллов";
   }
 
   pressure = Math.round(pressure * 0.750064);
@@ -78,7 +101,7 @@ const formatCurrentWather = (data) => {
   // const hours = new Date(dt * 1000).getHours();
   // const minutes = new Date(dt * 1000).getMinutes();
 
-  const { description, icon } = weather[0];
+  const { icon, description } = weather[0];
 
   return {
     dt,
@@ -95,7 +118,6 @@ const formatCurrentWather = (data) => {
     sunrise,
     sunset,
     weather,
-
     pressure,
     description,
     icon,

@@ -15,7 +15,7 @@ const GlobalSvgSelector = ({ id }) => {
       return <img src={small_rain_sun} alt="" />;
     case "small_rain":
       return <img src={small_rain} alt="" />;
-    case "mainly_cloudy":
+    case "03n":
       return <img src={mainly_cloudy} alt="" />;
     case "rain":
       return <img src={rain} alt="" />;

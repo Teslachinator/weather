@@ -78,7 +78,7 @@ time {
 @media (max-width: 480px) {
   .bigloc {
     order: 2;
-    min-width: 400px;
+    min-width: 350px;
     min-height: 300px;
   }
 }
