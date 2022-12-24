@@ -1,8 +1,6 @@
 import React from "react";
 import "./bigLocStyle.css";
 
-import GlobalSvgSelector from "../../Helpers/GlobalSvgSelector";
-
 const BigLoc = ({ weather: { dt, name, country, temp }, icon }) => {
   return (
     <article className="bigloc">

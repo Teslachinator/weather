@@ -7,9 +7,9 @@ import snow from "./IconsWeather/Group 48.svg";
 import storm from "./IconsWeather/Group 46.svg";
 import lightning from "./IconsWeather/Group 49.svg";
 
-const GlobalSvgSelector = ({ id }) => {
+const GlobalSvgSelector = (id) => {
   switch (id) {
-    case "sun":
+    case "03d":
       return <img src={sun} alt="#" />;
     case "small_rain_sun":
       return <img src={small_rain_sun} alt="" />;
