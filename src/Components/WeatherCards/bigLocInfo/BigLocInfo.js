@@ -4,6 +4,10 @@ import tempSVG from "./SVG/Group.svg";
 import presSVG from "./SVG/pressure.svg";
 import precipilation from "./SVG/Group3.svg";
 import wind from "./SVG/Group4.svg";
+import sunriseSVG from "./SVG/sunrise.svg";
+import sunsetSVG from "./SVG/sunset.svg";
+import descriptionSVG from "./SVG/description.svg";
+import visibilitySVG from "./SVG/visibility.svg";
 const BigLocInfo = ({
   weather: {
     speed,
@@ -57,28 +61,28 @@ const BigLocInfo = ({
       <ul>
         <li>
           <div className="info_logo-bg">
-            <img className="info_logo" src={tempSVG} alt="#" />
+            <img className="info_logo" src={sunriseSVG} alt="#" />
           </div>
           <p className="property">Восход</p>
           <p className="textCont">время: {sunrise}</p>
         </li>
         <li>
           <div className="info_logo-bg">
-            <img className="info_logo" src={tempSVG} alt="#" />
+            <img className="info_logo" src={sunsetSVG} alt="#" />
           </div>
           <p className="property">Закат</p>
           <p className="textCont">время: {sunset}</p>
         </li>
         <li>
           <div className="info_logo-bg">
-            <img className="info_logo" src={tempSVG} alt="#" />
+            <img className="info_logo" src={descriptionSVG} alt="#" />
           </div>
           <p className="property">Осадки</p>
           <p className="textCont">{description}</p>
         </li>
         <li>
           <div className="info_logo-bg">
-            <img className="info_logo" src={tempSVG} alt="#" />
+            <img className="info_logo" src={visibilitySVG} alt="#" />
           </div>
           <p className="property">Видимость</p>
           <p className="textCont">{visibility}</p>
